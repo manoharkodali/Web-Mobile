@@ -1,14 +1,10 @@
 package utilities;
 
-import java.io.File;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -134,7 +130,7 @@ public class DriverUtility {
 		getDriver().quit();
 	}
 
-	public static String takeSnapShot(String fileName) throws Exception {
+	/*public static String takeSnapShot(String fileName) throws Exception {
 
 		TakesScreenshot scrShot = ((TakesScreenshot) driver);
 		String scrBase64  = scrShot.getScreenshotAs(OutputType.BASE64);
@@ -143,5 +139,5 @@ public class DriverUtility {
 		File DestFile = new File(filePath);
 		FileUtils.copyFile(SrcFile, DestFile);
 		return filePath;
-	}
+	}*/
 }

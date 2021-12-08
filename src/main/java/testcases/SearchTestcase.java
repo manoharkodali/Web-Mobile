@@ -14,7 +14,6 @@ import com.aventstack.extentreports.Status;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.HidesKeyboardWithKeyName;
 import io.appium.java_client.MobileElement;
-import sampletests.StaticTest;
 import utilities.TestDataUtility;
 
 public class SearchTestcase extends BaseTest{
@@ -54,13 +53,11 @@ public class SearchTestcase extends BaseTest{
 	
 	@Test(alwaysRun = true)
 	public void searchTest2() throws FileNotFoundException{
-		System.out.println(StaticTest.name = "Kodali 1");
 		System.out.println("in search test 1");
 		test = extent.createTest("searchTest2");
 		//Map<String, Object> data = TestDataUtility.loadData("search.yml");
 		test.log(Status.INFO, "Starting searchTest2 test case");
 		mainPage.searchProduct("laptop");
-		Assert.fail("User failed");
 		test.log(Status.PASS, "searchTest2 ==>> Searching for Product Laptop test passed");
 		driver.getTitle();
 			

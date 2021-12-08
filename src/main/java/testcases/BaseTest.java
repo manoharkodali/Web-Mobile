@@ -43,10 +43,6 @@ public class BaseTest {
 	@AfterMethod(alwaysRun = true)
 	public void getResult(ITestResult result) throws Exception {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			// String sreenshotName = result.getName();
-			// String currentDate = new
-			// SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
-			// String fileName = sreenshotName+"_"+ currentDate;
 			String base64Screenshot = "data:image/png;base64"
 					+ ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
 			test.addScreenCaptureFromBase64String(base64Screenshot).getModel().getId();
